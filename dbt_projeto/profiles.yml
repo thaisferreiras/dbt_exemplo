@@ -1,0 +1,10 @@
+dbt_examplo:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project:
+      dataset: "{{ env_var('DBT_DBNAME', 'dbt') }}"
+      threads: 4
+      keyfile: /c/Users/tata-/.dbt/tatabya-e58c2d0a4025.json
